@@ -1,7 +1,7 @@
 C++ Registration Pattern with Protobuf Extension
 ======================
 
-A minimal example that implements the registry pattern in C++ and protobuf.
+A minimal example that implements the registry pattern in C++ and protobuf. In particular, it's implementing Variadic Factory pattern to achieve config-driven factory method without having to update the call sites.
 
 Build & Run
 ======================
