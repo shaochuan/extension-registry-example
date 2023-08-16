@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+package registry;
+
+message Animal {
+  extensions 100 to max;  // Reserve field numbers for extensions
+  // 100: registry.Dog
+  // 101: registry.Cat
+}
+  
+message Dog {
+  extend Animal {
+    optional Dog ext = 100;  // Add Dog as an extension to Animal
+  }
+  required string breed = 1;
+}
+
+message Cat {
+  extend Animal {
+    optional Cat ext = 101;  // Add Cat as an extension to Animal
+  }
+  required string color = 1;
+}
